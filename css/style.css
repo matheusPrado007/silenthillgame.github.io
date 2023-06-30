@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 80%;
+    height: 500px;
+    border-bottom: 1px solid #333;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.955);
+    border-radius: 5%;
+}
+
+.reset {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/piramid.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+}
+
+.nurse {
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    right: -85px;
+    animation: rabbit-animation 3s infinite linear;
+    opacity: 0.7.5;
+}
+
+.demon {
+    position: absolute;
+    bottom: 200px;
+    right: -85px;
+    animation: rabbit-animation 15s infinite linear;
+    opacity: 0.4;
+}
+
+.james {
+    width: 190px;
+    position: absolute;
+    bottom: 0px;
+    border-radius: 100%;
+    opacity: 0.8;
+} 
+
+.jump {
+    animation: james-up 500ms ease-out;
+}
+
+@keyframes rabbit-animation {
+    from {
+        right: 0;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes james-up {
+    0% {
+        bottom: 0;
+    }
+    40%{
+        bottom: 150px;
+    }
+    50% {
+        bottom: 150px;
+    }
+    60% {
+        bottom: 150px;
+    }
+    65% {
+        bottom: 150px;
+    }
+    71% {
+        bottom: 150px;
+    }
+    72% {
+        bottom: 130px;
+    }
+    73% {
+        bottom: 126px;
+    }
+    74% {
+        bottom: 150px;
+    }
+    75% {
+        bottom: 130px;
+    }
+    80% {
+        bottom: 126px;
+    }
+    85% {
+        bottom: 126px;
+    }
+    90% {
+        bottom: 126px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+.selo {
+    position: absolute;
+    width: 100px;
+    margin-left: 275px;
+}
