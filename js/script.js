@@ -27,7 +27,7 @@ const loop = setInterval(() => {
     const jamesPosition = +window.getComputedStyle(james).bottom.replace('px', '');
 
     if (nursePosition <= 45 && nursePosition > 0
-        && jamesPosition < 83 || demonPosition === 0   && jamesPosition >= 125) {
+        && jamesPosition < 83) {
         nurse.style.animation = 'none'
         nurse.style.hidden = true;
 
@@ -41,7 +41,7 @@ const loop = setInterval(() => {
 
         reset();
 
-        btnReset.addEventListener('click', function () {
+        btnReset.addEventListener('touchstart', function () {
             location.reload();
         })
 
@@ -75,4 +75,4 @@ const loop = setInterval(() => {
     }, 87000) 
 }, 10)
 
-document.addEventListener('touchstart', jump);
+document.addEventListener('touchstart' || 'click', jump);

@@ -28,7 +28,7 @@
 .nurse {
     position: absolute;
     bottom: 0;
-    width: 100px;
+    width: 90px;
     right: -85px;
     animation: rabbit-animation 1.7s infinite linear;
     opacity: 0.7.5;
@@ -36,14 +36,15 @@
 
 .demon {
     position: absolute;
+    width: 250px;
     bottom: 200px;
     right: -85px;
-    animation: rabbit-animation 15s infinite linear;
+    animation: rabbit-animation 20s infinite linear;
     opacity: 0.4;
 }
 
 .james {
-    width: 190px;
+    width: 170px;
     position: absolute;
     bottom: 0px;
     border-radius: 100%;
