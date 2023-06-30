@@ -15,9 +15,12 @@ const jump = () => {
 const reset = () => { 
 
     btnReset.innerText = 'Reset';
-    btnReset.style.width = '50px'
+    btnReset.style.width = '350px'
     btnReset.style.height = '50px'
+    btnReset.style.borderRadius = '100px'
+    btnReset.style.marginLeft = '5px'
     btnReset.style.backgroundColor = 'red'
+    btnReset.style.color = 'black'
     endGame.appendChild(btnReset);
 }
 
