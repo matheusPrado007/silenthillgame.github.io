@@ -5,8 +5,8 @@
 }
 
 .game-board {
-    width: 80%;
-    height: 500px;
+    width: 95%;
+    height: 400px;
     border-bottom: 1px solid #333;
     margin: 0 auto;
     position: relative;
@@ -30,7 +30,7 @@
     bottom: 0;
     width: 100px;
     right: -85px;
-    animation: rabbit-animation 3s infinite linear;
+    animation: rabbit-animation 1.7s infinite linear;
     opacity: 0.7.5;
 }
 

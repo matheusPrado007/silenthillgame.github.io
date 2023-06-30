@@ -36,7 +36,7 @@ const loop = setInterval(() => {
 
         james.src = '../images/nurse.gif'
         james.style.borderRadius = '0%'
-        james.style.width = '100%'
+        james.style.width = '350px'
         james.style.height = '100%'
 
         reset();
@@ -49,30 +49,30 @@ const loop = setInterval(() => {
     }
 
     setTimeout(() => {
-        demon.style.width = '600px';
+        demon.style.width = '300px';
         demon.style.bottom = '0px'
         setTimeout(() => {
-            demon.style.width = '1000px';
+            demon.style.width = '500px';
             demon.style.bottom = '0px'
         }, 1000);
         
         setTimeout(() => {
-            demon.style.width = '600px';
+            demon.style.width = '300px';
             demon.style.bottom = '0px'
          }, 1200);
 
         setTimeout(() => { 
-                james.src = '../images/end.gif'
-                james.style.borderRadius = '0%'
-                james.style.width = '100%'
-                james.style.height = '100%'
-                reset();
-                btnReset.addEventListener('click', function () {
-                    location.reload();
+            james.src = '../images/end.gif'
+            james.style.borderRadius = '0%'
+            james.style.width = '350px'
+            james.style.height = '100%'
+            reset();
+            btnReset.addEventListener('touchstart', function () {
+                location.reload();
         })
-        }, 50000)
+        }, 5000)
         
-    }, 88000) 
+    }, 87000) 
 }, 10)
 
-document.addEventListener('keydown', jump);
+document.addEventListener('touchstart', jump);
