@@ -34,7 +34,7 @@ const loop = setInterval(() => {
         nurse.style.animation = 'none'
         nurse.style.hidden = true;
 
-        // james.style.animation = 'none'
+        james.style.animation = 'none'
         // james.style.bottom = jamesPosition + 'px';
 
         james.src = '../images/nurse.gif'
