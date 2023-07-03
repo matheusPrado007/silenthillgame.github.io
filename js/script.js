@@ -33,7 +33,7 @@ const loop = setInterval(() => {
     const demonPosition = demon.offsetLeft;
     const jamesPosition = +window.getComputedStyle(james).bottom.replace('px', '');
 
-    if (nursePosition <= 40 && nursePosition > 25
+    if (nursePosition <= 39 && nursePosition > 35
         && jamesPosition < 72) {
         nurse.style.animation = 'none'
         nurse.style.hidden = true;
@@ -84,7 +84,7 @@ const loop = setInterval(() => {
         setTimeout(() => {
             james.src = '../images/end.gif'
             james.style.borderRadius = '0%'
-            james.style.width = '95%'
+            james.style.width = '100%'
             james.style.height = '100%'
             reset();
             btnReset.addEventListener('click', function () {
