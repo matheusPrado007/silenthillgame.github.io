@@ -3,6 +3,10 @@ const nurse = document.querySelector('.nurse');
 const demon = document.querySelector('.demon')
 const endGame = document.querySelector('.reset');
 const btnReset = document.createElement('button');
+const check = document.querySelector('#check');
+const audio = document.querySelector('#audio');
+const board = document.querySelector('.game-board');
+const selo = document.querySelector('.selo')
 
 const jump = () => {
     james.classList.add('jump');
@@ -12,11 +16,11 @@ const jump = () => {
     }, 500);
 }
 
-const reset = () => { 
+const reset = () => {
 
     btnReset.innerText = 'Reset';
-    btnReset.style.width = '350px'
-    btnReset.style.height = '50px'
+    btnReset.style.width = '95%'
+    btnReset.style.height = '5%'
     btnReset.style.borderRadius = '100px'
     btnReset.style.marginLeft = '5px'
     btnReset.style.backgroundColor = 'red'
@@ -26,11 +30,11 @@ const reset = () => {
 
 const loop = setInterval(() => {
     const nursePosition = nurse.offsetLeft;
-    const demonPosition = demon.offsetLeft; 
+    const demonPosition = demon.offsetLeft;
     const jamesPosition = +window.getComputedStyle(james).bottom.replace('px', '');
 
-    if (nursePosition <= 45 && nursePosition > 0
-        && jamesPosition < 83) {
+    if (nursePosition <= 40 && nursePosition > 25
+        && jamesPosition < 72) {
         nurse.style.animation = 'none'
         nurse.style.hidden = true;
 
@@ -39,12 +43,12 @@ const loop = setInterval(() => {
 
         james.src = '../images/nurse.gif'
         james.style.borderRadius = '0%'
-        james.style.width = '350px'
+        james.style.width = '95%'
         james.style.height = '100%'
 
         reset();
 
-        btnReset.addEventListener('touchstart', function () {
+        btnReset.addEventListener('click', function () {
             location.reload();
         })
 
@@ -52,30 +56,51 @@ const loop = setInterval(() => {
     }
 
     setTimeout(() => {
-        demon.style.width = '300px';
+        demon.style.width = '70%';
         demon.style.bottom = '0px'
+        demon.style.opacity = '1'
+        demon.style.animation = 'none'
+        board.style.backgroundColor = 'black'
+        selo.style.marginLeft = '0px'
+        selo.style.opacity = '1'
+        selo.style.borderRadius = '100%'
+        james.style.opacity = '0.5'
         setTimeout(() => {
-            demon.style.width = '500px';
+            demon.style.width = '90%';
             demon.style.bottom = '0px'
+            demon.style.opacity = '1'
         }, 1000);
-        
         setTimeout(() => {
-            demon.style.width = '300px';
+            demon.style.width = '70% ';
             demon.style.bottom = '0px'
-         }, 1200);
+            demon.style.opacity = '1'
+        }, 1200);
+        setTimeout(() => {
+            demon.style.width = '100% ';
+            demon.style.bottom = '0px'
+            demon.style.opacity = '1'
+        }, 1300);
 
-        setTimeout(() => { 
+        setTimeout(() => {
             james.src = '../images/end.gif'
             james.style.borderRadius = '0%'
-            james.style.width = '350px'
+            james.style.width = '95%'
             james.style.height = '100%'
             reset();
-            btnReset.addEventListener('touchstart', function () {
+            btnReset.addEventListener('click', function () {
                 location.reload();
-        })
-        }, 5000)
-        
-    }, 87000) 
+            })
+        }, 7000)
+    }, 87000)
 }, 10)
 
-document.addEventListener('touchstart' || 'click', jump);
+const soundOn = () => {
+    if (check.checked === true) {
+        return audio.autoplay = false;
+    }
+    return audio.autoplay = true;
+}
+
+soundOn();
+
+document.addEventListener('click', jump);
